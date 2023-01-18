@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./static/css/styles.css">
+        
+    <script type="module" src="./static/js/bank.js"></script>
+    <script type="module" src="./static/js/store.js"></script>
+    <script type="module" src="./static/js/work.js"></script>
+    <script type="module" src="./static/js/app.js"></script>
+</head>
+<body>
+
+    <div class="container">
+        <section id="bank">
+            <h2>Moe Banker</h2>
+            <label>OUTSTANDING LOAN: </label>
+            <label id="loanedBalanceAmount">0</label><br>
+            <label>BALANCE: </label>
+            <label id="bankBalanceAmount">0</label><br>
+            <button id="loanButton" class="buttonLoan">Get A Loan</button>
+        </section>
+
+        <section id="work">
+            <h2>Work</h2>
+            <label>BALANCE: </label>
+            <label id="workBalanceAmount">0</label><br>
+            <button id="bankButton" class="buttonLoan">Bank</button>
+            <button id="workButton" class="buttonLoan">Work</button>
+        </section>
+
+        <section id="laptops">
+            <h2>Laptops</h2>
+            <select name="laptops" id="laptopsList"></select>
+            <label>SPECS: </label><br>
+            <label id="laptopSpecs">Has a screen,Keyboard works, mostly,32MB Ram (Not upgradable),6GB Hard Disk,Comes with Floppy Disk Reader (Free) - Requires cable,Good excersice to carry</label>
+        </section>
+    </div>
+
+    <div class="storeContainer">
+
+            <h2>Komputer Store</h2>
+            <img id="laptopImage" width="250" height="250" src="https://hickory-quilled-actress.glitch.me/assets/images/1.png">
+            <label id="laptopName">Classic Notebook</label>
+            <label id="laptopDescription">A little old, but turns on.</label>
+            <label>PRICE: </label>
+            <label id="laptopPrice">200</label>
+            <label id="warning"></label>
+
+            
+            <button id="buyButton" class="buttonLoan">BUY!</button>
+
+    </div>
+
+</body>
+</html>
