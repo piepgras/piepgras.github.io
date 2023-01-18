@@ -1,59 +1,68 @@
 <!DOCTYPE html>
 <html lang="en">
+<!-- HTML Header -->
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="./static/css/styles.css">
-        
-    <script type="module" src="./static/js/bank.js"></script>
-    <script type="module" src="./static/js/store.js"></script>
-    <script type="module" src="./static/js/work.js"></script>
-    <script type="module" src="./static/js/app.js"></script>
 </head>
+<!-- HTML BODY -->
 <body>
-
+    <!-- Div for bank, work and laptops -->
     <div class="container">
+        <!-- Section for bank -->
         <section id="bank">
             <h2>Moe Banker</h2>
             <label>OUTSTANDING LOAN: </label>
-            <label id="loanedBalanceAmount">0</label><br>
+            <label id="loanedBalanceAmount" class="labels">0</label><br>
             <label>BALANCE: </label>
-            <label id="bankBalanceAmount">0</label><br>
-            <button id="loanButton" class="buttonLoan">Get A Loan</button>
+            <label id="bankBalanceAmount" class="labels">0</label><br>
+            <div class="absolute">
+                <button id="loanButton" class="button">Get A Loan</button>
+            </div>
         </section>
-
+        <!-- Section for work -->
         <section id="work">
-            <h2>Work</h2>
+            <h2>Work</h2> 
             <label>BALANCE: </label>
-            <label id="workBalanceAmount">0</label><br>
-            <button id="bankButton" class="buttonLoan">Bank</button>
-            <button id="workButton" class="buttonLoan">Work</button>
+            <label id="workBalanceAmount" class="labels">0</label><br>
+            <div class="absolute">
+                <button id="bankButton" class="button">Bank</button>
+                <button id="workButton" class="button">Work</button>
+            </div>
         </section>
-
+        <!-- Section for laptops -->
         <section id="laptops">
             <h2>Laptops</h2>
-            <select name="laptops" id="laptopsList"></select>
+            <select name="laptops" id="laptopsList"></select><br><br>
             <label>SPECS: </label><br>
             <label id="laptopSpecs">Has a screen,Keyboard works, mostly,32MB Ram (Not upgradable),6GB Hard Disk,Comes with Floppy Disk Reader (Free) - Requires cable,Good excersice to carry</label>
         </section>
     </div>
 
+    <!-- Div for store, yes it's a bit floaty I don't know css -->
     <div class="storeContainer">
+            <div class=""><h1>Komputer Store</h1></div>
+            <img id="laptopImage" width="250" height="250" src="https://hickory-quilled-actress.glitch.me/assets/images/1.png"><br>
+            <div>
+                <label id="laptopName">Classic Notebook</label><br>
+                <label id="laptopDescription">A little old, but turns on.</label><br>
+                <label>PRICE: </label>
+                <label id="laptopPrice" class="labels">200</label> ---- 
+                <label id="warning" class="labels"></label>
+            </div><br>
 
-            <h2>Komputer Store</h2>
-            <img id="laptopImage" width="250" height="250" src="https://hickory-quilled-actress.glitch.me/assets/images/1.png">
-            <label id="laptopName">Classic Notebook</label>
-            <label id="laptopDescription">A little old, but turns on.</label>
-            <label>PRICE: </label>
-            <label id="laptopPrice">200</label>
-            <label id="warning"></label>
-
-            
-            <button id="buyButton" class="buttonLoan">BUY!</button>
-
+            <div class="absolute">
+                <button id="buyButton" class="button">BUY!</button>
+            </div>
     </div>
 
+
+    <script type="module" src="./static/js/bank.js"></script>
+    <script type="module" src="./static/js/store.js"></script>
+    <script type="module" src="./static/js/work.js"></script>
+    <script type="module" src="./static/js/app.js"></script>
 </body>
 </html>

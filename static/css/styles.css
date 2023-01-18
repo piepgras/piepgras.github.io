@@ -1,3 +1,6 @@
+/* CSS stuff.. I'll be honest I just mixed and matched things
+until it looked like something, I'll learn it once I'm not sick */
+
 .container {
     display: flex;
     flex-wrap: wrap;
@@ -6,23 +9,25 @@
 }
 
 .storeContainer {
-    width: 750px;
-    display: flex;
-    flex-wrap: wrap;
+    width: 66%;
     align-items: center;
-
+    position: absolute;
+    width: 750px;
+    margin-left: 18.5%;
     padding: 100px;
     box-sizing: border-box;
     text-align: left;
     border: 2px solid #ccc;
     border-radius: 5px;
     box-shadow: 2px 2px 5px #ccc;
-    background-color: #17a2b8;
-}
+    background-color: #bbbbbb;
+    
+} 
 
 section {
+    font-family: Arial, Helvetica, sans-serif;
     width: 250px;
-    height: 250px;
+    height: 300px;
     padding: 5px;
     margin: 5px;
     box-sizing: border-box;
@@ -32,9 +37,22 @@ section {
     box-shadow: 2px 2px 5px #ccc;
 }
 
-.buttonLoan {
+.labels {
+    color: #FF0011;
+}
+
+div.absolute {
+    position: relative;
+    top: 15%;
+    left: 50%;
+    right: 0;
+    width: 100px;
+    height: 75px;
+}
+
+.button {
     background-color: #4CAF50; /* Green */
-    border: none;
+    border: ridge;
     color: white;
     padding: 15px 32px;
     text-align: center;
@@ -42,9 +60,9 @@ section {
     display: inline-block;
     font-size: 16px;
 }
-.buttonLoan:hover{
+.button:hover{
     background-color: #FF0011; /* Green */
-    border: none;
+    border: ridge;
     color: white;
     padding: 15px 32px;
     text-align: center;

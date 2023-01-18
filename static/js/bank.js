@@ -1,22 +1,23 @@
-const loanedBalanceAmountElement = document.getElementById("loanedBalanceAmount")
-const bankBalanceAmountElement = document.getElementById("bankBalanceAmount")
+// Setup HTMLElements for loanedBalanceAmount and bankBalanceAmount
+const loanedBalanceAmountElement = document.getElementById("loanedBalanceAmount");
+const bankBalanceAmountElement = document.getElementById("bankBalanceAmount");
 
+// Fields for tracking current owed amount, current bank balance and if a loan is currently active
 let hasLoan = false;
 let loanBalance = 0;
 let bankBalance = 0;
 
-
-//Deposit to balance
+//Deposit to increase bank balance 
 const deposit = (amount) => {
-    bankBalance = parseInt(bankBalance)+amount
-    bankBalanceAmountElement.innerText = bankBalance
+    bankBalance = Number(bankBalance) + amount;
+    bankBalanceAmountElement.innerText = bankBalance;
 }
 
 const payOffLoan = (amount) => {
     if(amount <= loanBalance){
-        loanBalance = parseInt(loanBalance) - amount
+        loanBalance = Number(loanBalance) - amount
     } else {
-        amount = parseInt(amount) - loanBalance
+        amount = Number(amount) - loanBalance
         loanBalance = 0
         bankBalance += amount
         invertLoanStatus()
@@ -43,10 +44,6 @@ const loanPrompt = () => {
         loanBalance += amount
         loanedBalanceAmountElement.innerText = loanBalance
     }
-}
-
-const createLoan = () => {
-
 }
 
 //Get current bank balance
